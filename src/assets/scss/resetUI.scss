@@ -1,0 +1,191 @@
+/*
+* create by junyong.hong
+* email 125173449@qq.com
+* time 2018/5/22
+* description 样式重写
+*/
+
+// 登陆页
+.login .van-popup{
+    background: transparent;
+}
+
+//账户页
+.vip-center {
+    .first-cell {
+        .van-cell__value span {
+            color: $maincolor;
+        }
+    }
+
+    .main-cell {
+        .van-cell__left-icon {
+            font-size: computed(50);
+        }
+
+        .van-cell:not(:last-child)::after {
+            border: 0;
+        }
+    }
+}
+
+// 商品详情
+.category-detail{
+    .detail-slider{
+        .detail-slider-content{
+            .van-swipe__indicators{
+                display: none !important;
+            }
+        }
+    }
+}
+
+//个人信息页
+.member-information{
+    .van-cell:not(:last-child)::after{
+        border-bottom-width:0;
+    }
+    .van-cell{
+        padding: 0 computed(30);
+    }
+    .van-cell__value{
+        border: 1px solid #ccc;
+        width: computed(570);
+    }
+    .van-cell__value.radius{
+        border: none;
+        font-size: computed(30);
+        line-height: computed(66);
+        text-align: left;
+    }
+    .van-radio{
+        float: left;
+        margin-right: computed(30);
+    }
+    .van-radio .van-icon-checked{
+        color: #2BA4F3;
+    }
+    .van-checkbox__icon--checked .van-icon{
+        width: computed(40);
+        border-color: #2BA4F3;
+        background: #2BA4F3;
+    }
+    .van-checkbox__icon .van-icon{
+        width: computed(40);
+    }
+    .van-field .van-cell__title{
+        max-width: computed(160);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        height:computed(66);
+        line-height: computed(66);
+        span::after{
+           content: '*';
+        //    left: computed(45);
+           top:computed(15);
+           font-size:$font-regular;
+           color: $text-red;
+           display: inline-block;
+           width:computed(25);
+           text-align: center;
+       }   
+    }
+    .van-field:nth-of-type(5),.van-field:nth-of-type(6) {
+        .van-cell__title{
+            span::after{
+                content: '';
+            }
+        }
+    }
+    .van-cell__value input{
+        height:computed(64);
+        line-height: computed(64);
+    }
+    .van-field__control{
+        padding-left: computed(30);
+    }
+    .van-field__icon{
+        position: relative;
+        right: computed(30);
+    }
+    .van-cell--required::before{
+        top: 6px;
+        content: '';
+    }
+    input:disabled{
+        color: #ccc;
+        background-color: #f0f0f0;
+    }
+    .van-field__button{
+        position: absolute;
+        right: computed(10);
+        line-height:computed(66);
+        font-size: computed(20);
+        text-decoration: underline;
+        a{
+            color: #d80000;
+        }
+    }
+    .van-popup--bottom{
+        top: 50%;
+    }
+}
+
+
+/* 重置弹出框背景灰度 */
+.van-modal {
+    background-color: rgba(0, 0, 0, 0.41) !important;
+}
+
+/* 自定义弹窗背景 -- 分享 */
+.share-img {
+    background: url('assets/images/goods/share.png') no-repeat;
+    background-size: computed(370) computed(230);
+    background-position-x: computed(320);
+}
+
+/* 重置轮播小圆点样式 */
+.van-swipe__indicators {
+    margin-bottom: computed(20);
+
+    i {
+        width: computed(16);
+        height: computed(16);
+
+        &.van-swipe__indicator--active {
+            background-color: $maincolor !important;
+        }
+    }
+}
+#YSF-BTN-HOLDER {
+    display: none
+}
+
+.van-toast--html {
+    width: 80%;
+    .toast-html {
+        padding: computed(15);
+        h2 {
+            text-align: center;
+            font-size: computed(30);
+            margin-bottom: computed(15);
+        }
+        p {
+            font-size: computed(24);
+            margin-bottom: computed(10);
+        }
+    }
+}
+.van-toast {
+    text-align: center;
+    font-size: computed(24);
+    line-height: computed(40);
+    white-space: pre-line;
+}
+
+
+.van-list__error-text, .van-list__finished-text, .van-list__loading-text{
+
+    // background: #ffffff;
+}

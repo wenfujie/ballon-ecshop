@@ -1,0 +1,109 @@
+//  优惠券模块通用样式
+.vouchers{
+    padding: computed(30) computed(25) computed(150);
+}
+.vouchers-list .vouchers-item{
+    position: relative;
+    &.disabled{
+        color: #CCCCCC !important;
+        p,div,span{
+            color: #CCCCCC !important;
+        }
+    }
+    .detail{
+        height: computed(276);
+        background: url("./assets/images/member/vouchers.png") no-repeat top left;
+        background-size: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &::after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+        .left-box{
+            width: computed(275);
+            height: computed(220);
+            border-right: dashed 1px #DBDBDB;
+            text-align: center;
+            .type{
+                margin-top: computed(10);
+                font-size: computed(36);
+                color: #0D0E09;
+            }
+            .value{
+                margin-top: computed(25);
+                font-size: computed(38);
+                line-height: computed(94);
+                color: #2BA4F3;
+                span{
+                    font-size: computed(92);
+                }
+            }
+            .tip{
+                font-size: computed(28);
+                line-height: computed(30);
+                color: #D80000;
+                &.add-wechat{
+                    color: #0D0E09;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .right-box{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+            .time{
+                font-size: computed(28);
+                line-height: computed(30);
+                color: #999999;
+            }
+            .btn{
+                width: computed(268);
+                height: computed(70);
+                margin-top: computed(40);
+                font-size: computed(32);
+                line-height: computed(70);
+                color: #ffffff;
+                text-align: center;
+                background: #2BA4F3;
+            }
+        }
+    }
+    .explain{
+        margin: 0 computed(10);
+        padding: computed(12) computed(16);
+        position: relative;
+        background: #F5F5F5;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        box-shadow: 0 computed(4) computed(16) #d5d5d5;
+        p{
+            width: computed(560);
+            height: computed(30);
+            font-size: computed(24);
+            line-height: computed(30);
+            color: #999999;
+            overflow: hidden;
+        }
+        .icon-xialaxuan{
+            position: absolute;
+            right: computed(15);
+            top: computed(15);
+            color: #999;
+        }
+        &.show-content{
+            p {
+                height: auto;
+            }
+            .icon-xialaxuan{
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+

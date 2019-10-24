@@ -1,0 +1,382 @@
+//CSS初始化
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+abbr,
+acronym {
+    border: 0;
+}
+
+button {
+    outline: 0;
+    border: 0;
+}
+
+input {
+    background: #ffffff;
+}
+
+input::-webkit-search-cancel-button {
+    display: none;
+}
+
+input[type="search"]::-ms-clear {
+    display: none !important;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none !important;
+}
+
+// 防止vue页面数据未渲染时的闪烁
+[v-cloak] {
+    display: none
+}
+
+.comment-close-36 {
+    font-size: computed(36);
+    color: #999999;
+    text-align: right;
+    position: fixed;
+    right: computed(16);
+    top: computed(20);
+    z-index: 9999;
+}
+
+//  全局通用的底部按钮
+.common-bottom-btn {
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: computed(160);
+    overflow: hidden;
+    z-index: 3;
+    background: #ffffff;
+}
+
+.common-bottom-btn .btn-txt {
+    margin: computed(30);
+    font-size: computed(32);
+    line-height: computed(100);
+    color: #ffffff;
+    background: #2BA4F3;
+    text-align: center;
+}
+
+//  全局通用浮动
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+//  商品列表
+.member-center {
+    .no-goods-tip {
+        margin-top: computed(30);
+        font-size: computed(24);
+        line-height: computed(26);
+        color: #0D0E09;
+        text-align: center;
+    }
+
+    .member-goods-list {
+        box-sizing: border-box;
+        margin: 0 computed(30);
+        overflow: hidden;
+
+        ul {
+            position: relative;
+            overflow: hidden;
+            padding-bottom: computed(20);
+
+            .member-goods-item {
+                float: left;
+                width: computed(330);
+                margin-top: computed(30);
+                position: relative;
+
+                img {
+                    display: block;
+                    border: none;
+                    width: computed(330);
+                    height: computed(330);
+                }
+            }
+
+            .member-goods-item:nth-child(2n) {
+                float: right;
+            }
+        }
+    }
+
+    .member-goods-list::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+//  优惠券模块通用样式
+.vouchers {
+    padding: computed(30) computed(25) computed(120);
+}
+
+.vouchers-list .vouchers-item {
+    position: relative;
+    margin-bottom: computed(30);
+
+    &.disabled {
+        color: #CCCCCC !important;
+
+        p,
+        div,
+        span {
+            color: #CCCCCC !important;
+        }
+
+        .disabled-tip {
+            position: absolute;
+            right: computed(10);
+            top: computed(10);
+            width: computed(146);
+            height: computed(128);
+            z-index: 2;
+        }
+    }
+
+    .detail {
+        height: computed(276);
+        background-size: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .left-box {
+            box-sizing: border-box;
+            width: computed(275);
+            height: computed(220);
+            padding-left: computed(24);
+            border-right: dashed 1px #DBDBDB;
+            text-align: center;
+
+            .type {
+                margin-top: computed(20);
+                font-size: computed(36);
+                color: #0D0E09;
+                word-break: keep-all;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .value {
+                margin-top: computed(30);
+                line-height: computed(94);
+                height: computed(94);
+                overflow: hidden;
+                color: #2BA4F3;
+
+                span:nth-of-type(1) {
+                    font-size: computed(92);
+                }
+
+                .price {
+                    font-size: computed(38);
+                }
+            }
+
+            .tip {
+                margin-top: computed(5);
+                font-size: computed(28);
+                line-height: computed(38);
+                color: #D80000;
+
+                &.add-wechat {
+                    color: #0D0E09;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .right-box {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+
+            .time {
+                margin-top: computed(7);
+                padding: 0 computed(20);
+                font-size: computed(22);
+                line-height: computed(30);
+                color: #999999;
+                text-align: center;
+            }
+
+            .btn {
+                width: computed(268);
+                height: computed(70);
+                margin-top: computed(20);
+                font-size: computed(32);
+                line-height: computed(70);
+                color: #ffffff;
+                text-align: center;
+                background: #2BA4F3;
+            }
+
+            .btn.buy-btn {
+                background: #666;
+            }
+        }
+    }
+
+    .explain {
+        margin: 0 computed(10);
+        padding: computed(12) computed(16);
+        position: relative;
+        background: #F5F5F5;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        box-shadow: 0 computed(4) computed(16) #d5d5d5;
+
+        p {
+            width: computed(590);
+            height: computed(30);
+            font-size: computed(24);
+            line-height: computed(30);
+            color: #999999;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .icon-xialaxuan {
+            position: absolute;
+            right: computed(15);
+            top: computed(12);
+            color: #999;
+        }
+
+        &.show-content {
+            p {
+                height: auto;
+                overflow: auto;
+                white-space: normal;
+            }
+
+            .icon-xialaxuan {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+html,
+body {
+    background: #ffffff;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.omit {
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.no-data {
+    height: 100%;
+  }

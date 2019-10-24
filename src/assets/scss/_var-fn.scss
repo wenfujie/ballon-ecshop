@@ -1,0 +1,33 @@
+//计算单位函数
+@function computed($number) {
+    @return ($number/750)*100vw
+}
+
+$maincolor: #2ba4f3;
+$blackcolor: #0d0e09;
+$blackcolor-1: rgba(116, 116, 116, 1);
+
+//  常用文字色值-UI规范
+$text-primary: #333333; // 用于大多数文字
+$text-regular: #666666; // 用于辅助性文字（主要）
+$text-secondary: #999999; // 用于辅助性文字（次级）
+$text-block: #0D0E09;
+$text-red:#D80000;
+$text-placeholder: #CCCCCC; // 用于弱提示文字（占位文字）
+
+//  常用标准色-UI规范
+$color-white: #ffffff; // 白色
+
+// 边框颜色
+$border-gray-1px: #E6E6E6;
+
+//  文字大小-UI规范
+$font-h: computed(45); // 字体图标
+$font-h1: computed(36); // 主要用于首页标题等
+$font-h2: computed(32); // 主要用于列表大标题等
+$font-title1: computed(30); // 主要用于列表商品价格等
+$font-regular: computed(28); // 大部分用于底部按钮字体（粗体主要用于Tab选中状态等）
+$font-num: computed(26); // 数量
+$font-common: computed(24); // 用于大多数字体
+$font-small: computed(20); // 辅助说明字体
+$font-mini: computed(16); // 图标说明

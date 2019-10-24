@@ -1,0 +1,27 @@
+.immediately-appointment {
+    background: #2ba4f3;
+    position: fixed;
+    bottom: computed(0);
+    height: computed(100);
+    width: 100%;
+    font-size: computed(32);
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    line-height: computed(85);
+}
+
+
+.page-title {
+    position: fixed;
+    top:computed(0);
+    width: 100%;
+    height: computed(88);
+    background: #1b1a1f;
+    z-index: 2;
+    font-size: computed(36);
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    line-height: computed(58);
+}

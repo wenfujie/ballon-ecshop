@@ -1,0 +1,41 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "webServer on node by koa2",
+    "main": "app.js",
+    "scripts": {
+        "dev": "cross-env LOCAL_NODE_ENV=development nodemon --inspect ./bin/app.js ",
+        "test": "cross-env LOCAL_NODE_ENV=test nodemon --inspect ./bin/app.js ",
+        "test2": "cross-env LOCAL_NODE_ENV=test2 nodemon --inspect ./bin/app.js ",
+        "pm": "cross-env LOCAL_NODE_ENV=pm nodemon  --inspect ./bin/app.js",
+        "start": "nodemon ./bin/app.js"
+    },
+    "keywords": [
+        "koa2",
+        "node",
+        "server"
+    ],
+    "author": "vshen",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^0.19.0",
+        "cross-env": "^5.2.0",
+        "form-data": "^2.4.0",
+        "ip": "^1.1.5",
+        "koa": "^2.5.1",
+        "koa-body": "^4.0.4",
+        "koa-bodyparser": "^4.2.0",
+        "koa-cors": "0.0.16",
+        "koa-router": "^7.4.0",
+        "koa-session": "^5.8.2",
+        "koa-static": "^4.0.3",
+        "koa-views": "^6.1.4",
+        "log4js": "^4.4.0",
+        "moment": "^2.22.2",
+        "nodemon": "^1.8.1",
+        "pm2": "^2.10.4",
+        "request-promise": "^4.2.2",
+        "winston": "^3.0.0",
+        "winston-daily-rotate-file": "^3.2.3"
+    }
+}

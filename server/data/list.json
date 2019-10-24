@@ -1,0 +1,7 @@
+[
+    { "title": "个人信息", "icon": "huiyuan" ,"path":"/member/member-information"},
+    { "title": "地址管理", "icon": "dingwei", "path":"/address-list" },
+    { "title": "在线客服", "icon": "fuwuzhongxin" },
+    { "title": "愿望清单", "icon": "wodeguanzhu" },
+    { "title": "我的足迹", "icon": "zuji" }
+]

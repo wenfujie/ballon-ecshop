@@ -1,0 +1,72 @@
+dev:
+  ballon:
+    env:
+      NODE_ENV: dev
+      SERVICE_API: http://qishon-zuul-gateway.dev.qs.com
+      TOKEN_API: http://qishon-zuul-gateway.dev.qs.com/uaa/oauth-client/token
+      OSS_API: http://qishon-zuul-gateway.dev.qs.com/file/oss
+      DP_API: http://qishon-zuul-gateway.dev.qs.com
+      NETTY_API: http://1.1.2.50:2081/api
+    svc:
+      nodePort:
+      - from: 3000
+        to: 5001
+test2:
+  ballon:
+    env:
+      NODE_ENV: test2
+      SERVICE_API: http://qishon-zuul-gateway
+      TOKEN_API: http://qishon-zuul-gateway/uaa/oauth-client/token
+      OSS_API: http://qishon-zuul-gateway/file/oss
+      OSS_OPEN_API: http://qsuat.qishon.com/openfile/v2/oss/image/
+      DP_API: http://qishon-zuul-gateway
+      NETTY_API: http://1.1.2.50:2082/api
+      SHOP_CLIENT_ID: wissClient
+      SHOP_CLIENT_SECRET: wissClientSecret
+    svc:
+      nodePort:
+      - from: 3000
+        to: 30288
+    resources:
+      limits:
+        memory: "512Mi"
+prod:
+  ballon:
+    replicas: 4
+    env:
+      NODE_ENV: prod
+      SERVICE_API: http://qishon-zuul-gateway
+      TOKEN_API: http://qishon-zuul-gateway/uaa/oauth-client/token
+      OSS_API: http://qishon-zuul-gateway/file/oss
+      DP_API: http://qishon-zuul-gateway
+    livenessProbe:
+      tcpSocket:
+        port: 3000
+      initialDelaySeconds: 30
+      periodSeconds: 30
+preprod:
+  ballon:
+    replicas: 4
+    env:
+      NODE_ENV: preprod
+      SERVICE_API: http://qishon-zuul-gateway
+      TOKEN_API: http://qishon-zuul-gateway/uaa/oauth-client/token
+      OSS_API: http://qishon-zuul-gateway/file/oss
+      DP_API: http://qishon-zuul-gateway
+business:
+  ballon:
+    replicas: 4
+    env:
+      NODE_ENV: prod
+      SERVICE_API: http://qishon-zuul-gateway
+      NETTY_API: http://wxshop.chinaballon.com/api
+      TOKEN_API: http://qishon-zuul-gateway/uaa/oauth-client/token
+      OSS_API: http://qishon-zuul-gateway/file/oss
+      OSS_OPEN_API: http://wxshop.chinaballon.com/v3/oss/image/
+      DP_API: http://qishon-zuul-gateway
+      SHOP_CLIENT_ID: wissClient
+      SHOP_CLIENT_SECRET: wissClientSecret
+    svc:
+      nodePort:
+      - from: 3000
+        to: 30188
